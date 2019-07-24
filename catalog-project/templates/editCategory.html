@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+    <form action="{{url_for('editCategory',category_name=current_category.name)}}" method="post">
+        <label for="name"> Name
+            <input type="text" placeholder="{{ current_category.name }}" name="name">
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

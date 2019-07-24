@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="row">
+	<div class="col-md-5">
+		<h1>Categories</h1>
+        <a href="{{ url_for('addCategory') }}"
+           style=
+                   "color: #9FB80A;font-weight: bolder;margin-top: 2em;visibility:{{ show_editing_links }}"
+        >Add Category</a>
+        <ul>
+        {% for category in categories %}
+            <li><a href="{{ url_for('showItemsPerCategory',category_name=category.name) }}">{{ category.name }}</a> </li>
+        {% endfor %}
+        </ul>
+	</div>
+    <div class="vl col-md-1"></div>
+	<div class="col-md-6">
+        <a href="{{ url_for('addItem') }}"
+           style=
+                   "color: #9FB80A;font-weight: bolder;margin-top: 2em;visibility:{{ show_editing_links }}"
+        >Add item</a>
+		<h1>Latest added items</h1>
+        <ul>
+        {% for item in latest_items %}
+            <li><a href="{{ url_for('showItem',category_name = item.category.name,item_name=item.name) }}"> {{ item.name }} <em>({{ item.category.name }})</em></a> </li>
+        {% endfor %}
+        </ul>
+	</div>
+</div>
+
+{% endblock %}

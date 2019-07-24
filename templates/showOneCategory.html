@@ -1,0 +1,53 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="row">
+    <div class="col-md-5">
+		<h1>Categories</h1>
+        <a href="{{ url_for('addCategory') }}"
+           style=
+                   "color: #9FB80A;font-weight: bolder;margin-top: 2em;visibility: {{ show_editing_links }}"
+        >Add Category</a>
+        <ul>
+        {% for category in categories %}
+            <li><a href="{{ url_for('showItemsPerCategory',category_name=category.name) }}">{{ category.name }}</a> </li>
+        {% endfor %}
+        </ul>
+	</div>
+    <div class="vl col-md-1"></div>
+	<div class="col-md-6">
+    <a href="{{ url_for('addItem') }}"
+           style=
+                   "color: #9FB80A;font-weight: bolder;margin-top: 2em;visibility: {{ show_editing_links }}"
+        >Add item</a>
+    {% if category_items[0] != null %}
+        <h1>{{ category_items[0].category.name }} <em>({{ category_items|length }} items)</em></h1>
+            <span style="visibility: {{ show_editing_links }}">
+                <a href="{{ url_for('editCategory',
+                        category_name=category_items[0].category.name) }}">Edit</a>
+                |
+                <a href="{{ url_for('deleteCategory',
+                        category_name=category_items[0].category.name) }}">Delete</a>
+            </span>
+        <ul>
+        {% for item in category_items %}
+            <li><a href="{{ url_for('showItem',category_name = item.category.name,item_name=item.name) }}"> {{ item.name }}</a> </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <h1>{{ current_category.name }} <em>({{ 0 }} items)</em></h1>
+        <span style="visibility: {{ show_editing_links }}">
+                <a href="{{ url_for('editCategory',
+                        category_name=current_category.name) }}">Edit</a>
+                |
+                <a href="{{ url_for('deleteCategory',
+                        category_name=current_category.name) }}">Delete</a>
+        </span>
+        <p style="margin-top: 5em">You haven't added any items to this category yet !</p>
+    {% endif %}
+
+	</div>
+</div>
+
+{% endblock %}
