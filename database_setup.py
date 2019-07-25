@@ -1,7 +1,6 @@
 import datetime
 
 from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
-from sqlalchemy.dialects.sqlite import json
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
