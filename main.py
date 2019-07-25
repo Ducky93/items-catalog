@@ -425,5 +425,6 @@ def addItem():
 
 if __name__ == '__main__':
     app.secret_key = '$#*$89a89sdassdaj(*#$&(!)JKASL'
-    app.debug = True
-    app.run(host='127.0.0.1', port=5000)
+    # app.debug = True
+    # app.run(host='127.0.0.1', port=5000)
+    app.run()
