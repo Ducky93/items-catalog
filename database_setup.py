@@ -10,7 +10,7 @@ Base = declarative_base()
 
 
 class User(Base):
-    __tablename__ = 'user'
+    __tablename__ = 'users'
 
     id = Column(String, primary_key=True)
     name = Column(String(250), nullable=False)

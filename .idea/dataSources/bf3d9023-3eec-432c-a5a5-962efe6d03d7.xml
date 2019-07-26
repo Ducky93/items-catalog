@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="itemscatalog">
+<dataSource name="itemscatalog [2]">
   <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.15">
     <root id="1">
       <ServerVersion>3.25.1</ServerVersion>
@@ -126,6 +126,7 @@
     <index id="34" parent="9" name="sqlite_autoindex_user_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
+      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="35" parent="9">
