@@ -24,7 +24,7 @@ class Category(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
     created = Column(DateTime, default=datetime.datetime.utcnow())
-    user_id = Column(String, ForeignKey('user.id'))
+    user_id = Column(String, ForeignKey('users.id'))
     user = relationship(User)
 
     @property
@@ -45,7 +45,7 @@ class CatalogItem(Base):
     created = Column(DateTime, default=datetime.datetime.utcnow())
     category_id = Column(Integer, ForeignKey('category.id'))
     category = relationship(Category)
-    user_id = Column(String, ForeignKey('user.id'))
+    user_id = Column(String, ForeignKey('users.id'))
     user = relationship(User)
 
     @property

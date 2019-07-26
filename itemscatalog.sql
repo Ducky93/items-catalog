@@ -14,7 +14,7 @@ create table category
     name    VARCHAR(250) not null,
     created TIMESTAMP,
     user_id VARCHAR(250)
-        references users
+        references users(id)
 );
 
 create table catalog_item
@@ -25,8 +25,8 @@ create table catalog_item
     description VARCHAR(250),
     created     TIMESTAMP,
     category_id INTEGER
-        references category,
+        references category(id),
     user_id     VARCHAR(250)
-        references users
+        references users(id)
 );
 
