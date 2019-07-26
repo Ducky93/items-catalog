@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bca1c7b-2141-499d-aa43-a3496ce7edee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/database_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itemscatalog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/itemscatalog.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,8 +77,8 @@
       <file pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="391">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding>
                 <element signature="e#23#34#0" expanded="true" />
               </folding>
@@ -217,11 +216,11 @@
         <option value="$PROJECT_DIR$/templates/showCategories.html" />
         <option value="$PROJECT_DIR$/templates/showOneCategory.html" />
         <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/itemscatalog.sql" />
         <option value="$PROJECT_DIR$/database_setup.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -385,12 +384,12 @@
       <workItem from="1561710122829" duration="4710000" />
       <workItem from="1564060363777" duration="1763000" />
       <workItem from="1564137685797" duration="3960000" />
-      <workItem from="1564148855750" duration="5746000" />
+      <workItem from="1564148855750" duration="6095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276289000" />
+    <option name="totallyTimeSpent" value="276638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -667,8 +666,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="391">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
           <folding>
             <element signature="e#23#34#0" expanded="true" />
           </folding>

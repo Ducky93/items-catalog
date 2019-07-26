@@ -24,6 +24,7 @@ CLIENT_SECRET_FILE = 'client_secret.json'
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gsdyhfpzvhxvbz:3903f4b5f0dbed10fe05b20fd63cc77c0fc7a7001a3cf1625204628c4f982693@ec2-54-247-170-5.eu-west-1.compute.amazonaws.com:5432/ddvjg9iiu4vo5r"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY']='$#*$89a89sdassdaj(*#$&(!)JKASL'
 db = SQLAlchemy(app)
 
 # Connect to Database and create database session
@@ -425,7 +426,7 @@ def addItem():
 
 
 if __name__ == '__main__':
-    app.secret_key = '$#*$89a89sdassdaj(*#$&(!)JKASL'
+    # app.secret_key = '$#*$89a89sdassdaj(*#$&(!)JKASL'
     # app.debug = True
     # app.run(host='127.0.0.1', port=5000)
     app.run()
