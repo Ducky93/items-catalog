@@ -4,7 +4,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
-
+import os
 
 Base = declarative_base()
 
@@ -58,6 +58,5 @@ class CatalogItem(Base):
         }
 
 
-engine = create_engine('postgresql:///itemscatalog.db')
-
+engine = create_engine('sqlite:///itemscatalog.db')
 Base.metadata.create_all(engine)

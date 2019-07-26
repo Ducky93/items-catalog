@@ -6,7 +6,7 @@ from functools import wraps
 
 from flask import Flask, render_template, request, flash, abort
 from flask import session as login_session
-from flask_sqlalchemy import xrange
+from flask_sqlalchemy import xrange, SQLAlchemy
 from oauth2client import client
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
@@ -22,18 +22,18 @@ CLIENT_SECRET_FILE = 'client_secret.json'
 
 # End of login process
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = "'postgres://gsdyhfpzvhxvbz:3903f4b5f0dbed10fe05b20fd63cc77c0fc7a7001a3cf1625204628c4f982693@ec2-54-247-170-5.eu-west-1.compute.amazonaws.com:5432/ddvjg9iiu4vo5r"
+DBSession = SQLAlchemy(app)
 
 # Connect to Database and create database session
-engine = create_engine('sqlite:///itemscatalog.db?check_same_thread=False')
-Base.metadata.bind = engine
-
-DBSession = sessionmaker(bind=engine)
+# engine = create_engine('sqlite:///itemscatalog.db?check_same_thread=False')
+# Base.metadata.bind = engine
+#
+# DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 code = ''
 
-
-# // TODO FIX THE EDITING AND DELETING LINKS SHOWS WHILE NOT LOGGED IN
 
 @app.context_processor
 def context_processor():
